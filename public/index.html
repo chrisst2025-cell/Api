@@ -7,7 +7,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Chris St Lyrics API</title>
+<title>Lyrics API</title>
 
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,10 +16,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;900&display=swap" rel="stylesheet">
 
 
-<link rel="stylesheet" href="css/style.css">
-
-
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
+<link rel="stylesheet" href="css/style.css">
 
 
 </head>
@@ -34,35 +34,40 @@
 
 <nav class="navbar">
 
+
 <div class="profile">
 
-<img src="https://i.imgur.com/default.png" id="adminAvatar">
+
+<img id="adminAvatar" src="" alt="Admin">
+
 
 <div>
 
-<h3>Chris St</h3>
+<h3 id="adminName">
+Chargement...
+</h3>
 
-<span>
-<i class="fa-solid fa-crown"></i>
-Administrator
+
+<span id="adminRole">
 </span>
 
-</div>
 
 </div>
 
 
+</div>
 
-<div class="nav-buttons">
+
 
 <button id="settingsBtn">
-<i class="fa-solid fa-gear"></i>
-</button>
 
-</div>
+<i class="fa-solid fa-gear"></i>
+
+</button>
 
 
 </nav>
+
 
 
 
@@ -82,7 +87,7 @@ Lyrics
 
 
 <p>
-Recherche les paroles de tes musiques avec une API rapide et simple.
+Recherche les paroles de tes musiques rapidement grâce à notre API.
 </p>
 
 
@@ -90,9 +95,9 @@ Recherche les paroles de tes musiques avec une API rapide et simple.
 <div class="search-box">
 
 
-<input
-type="text"
+<input 
 id="songInput"
+type="text"
 placeholder="Exemple : Adele Hello"
 >
 
@@ -110,6 +115,7 @@ Chercher
 
 
 
+
 <div class="api-status">
 
 <span></span>
@@ -117,6 +123,7 @@ Chercher
 API Online
 
 </div>
+
 
 
 </section>
@@ -130,10 +137,7 @@ API Online
 <section id="resultContainer" class="music-card hidden">
 
 
-<img id="cover"
-src="https://i.imgur.com/default.png"
->
-
+<img id="cover" src="" alt="cover">
 
 
 <div class="music-info">
@@ -167,7 +171,6 @@ Album
 </button>
 
 
-
 <button id="downloadBtn">
 
 <i class="fa-solid fa-download"></i>
@@ -195,12 +198,16 @@ Copier
 <audio id="audioPlayer" controls></audio>
 
 
+
+<pre id="lyrics">
+</pre>
+
+
+
 </div>
 
 
-
 </section>
-
 
 
 
@@ -218,16 +225,12 @@ Documentation API
 
 <div class="doc-card">
 
-
 <h3>
 GET /api/lyrics
 </h3>
 
-
 <code>
-
-? song=Adele Hello
-
+/api/lyrics?song=Adele Hello
 </code>
 
 
@@ -235,21 +238,16 @@ GET /api/lyrics
 
 
 
-
 <div class="doc-card">
-
 
 <h3>
 POST /api/lyrics
 </h3>
 
-
 <code>
-
 {
 "song":"Adele Hello"
 }
-
 </code>
 
 
@@ -261,11 +259,9 @@ POST /api/lyrics
 
 
 
-
-
-
-
 </main>
+
+
 
 
 
@@ -281,6 +277,7 @@ POST /api/lyrics
 
 ×
 
+
 </button>
 
 
@@ -290,43 +287,43 @@ Paramètres
 
 
 
-<input
+<input 
 id="adminPassword"
 type="password"
-placeholder="Mot de passe admin"
+placeholder="Mot de passe administrateur"
 >
 
 
-
-<input
+<input 
 id="backgroundUrl"
-placeholder="Lien image Imgur / ImgBB"
+placeholder="Lien image ImgBB / Imgur"
 >
 
 
 
 <button id="changeBg">
 
-Changer Background
+Changer le background
 
 </button>
+
 
 
 
 <div class="contacts">
 
 
-<a href="#">
+<a id="facebookLink">
 Facebook
 </a>
 
 
-<a href="#">
+<a id="telegramLink">
 Telegram
 </a>
 
 
-<a href="#">
+<a id="tiktokLink">
 TikTok
 </a>
 
@@ -345,7 +342,10 @@ TikTok
 
 
 
+
 <script src="js/app.js"></script>
+
+<script src="js/settings.js"></script>
 
 
 </body>
