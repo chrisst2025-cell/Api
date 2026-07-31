@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Chris St Lyrics API</title>
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+
+
+<link rel="stylesheet" href="css/style.css">
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
+</head>
+
+
+<body>
+
+
+<div id="background-layer"></div>
+
+
+
+<nav class="navbar">
+
+<div class="profile">
+
+<img src="https://i.imgur.com/default.png" id="adminAvatar">
+
+<div>
+
+<h3>Chris St</h3>
+
+<span>
+<i class="fa-solid fa-crown"></i>
+Administrator
+</span>
+
+</div>
+
+</div>
+
+
+
+<div class="nav-buttons">
+
+<button id="settingsBtn">
+<i class="fa-solid fa-gear"></i>
+</button>
+
+</div>
+
+
+</nav>
+
+
+
+
+
+<main>
+
+
+
+<section class="hero">
+
+
+<h1>
+Lyrics
+<span>API</span>
+</h1>
+
+
+<p>
+Recherche les paroles de tes musiques avec une API rapide et simple.
+</p>
+
+
+
+<div class="search-box">
+
+
+<input
+type="text"
+id="songInput"
+placeholder="Exemple : Adele Hello"
+>
+
+
+<button id="searchBtn">
+
+<i class="fa-solid fa-magnifying-glass"></i>
+
+Chercher
+
+</button>
+
+
+</div>
+
+
+
+<div class="api-status">
+
+<span></span>
+
+API Online
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<section id="resultContainer" class="music-card hidden">
+
+
+<img id="cover"
+src="https://i.imgur.com/default.png"
+>
+
+
+
+<div class="music-info">
+
+
+<h2 id="title">
+Titre
+</h2>
+
+
+<h3 id="artist">
+Artiste
+</h3>
+
+
+<p id="album">
+Album
+</p>
+
+
+
+<div class="actions">
+
+
+<button id="playBtn">
+
+<i class="fa-solid fa-play"></i>
+
+Écouter
+
+</button>
+
+
+
+<button id="downloadBtn">
+
+<i class="fa-solid fa-download"></i>
+
+Télécharger
+
+</button>
+
+
+
+<button id="copyBtn">
+
+<i class="fa-solid fa-copy"></i>
+
+Copier
+
+</button>
+
+
+
+</div>
+
+
+
+<audio id="audioPlayer" controls></audio>
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+<section class="documentation">
+
+
+<h2>
+Documentation API
+</h2>
+
+
+<div class="doc-card">
+
+
+<h3>
+GET /api/lyrics
+</h3>
+
+
+<code>
+
+? song=Adele Hello
+
+</code>
+
+
+</div>
+
+
+
+
+<div class="doc-card">
+
+
+<h3>
+POST /api/lyrics
+</h3>
+
+
+<code>
+
+{
+"song":"Adele Hello"
+}
+
+</code>
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+</main>
+
+
+
+
+
+<div id="settingsPanel">
+
+
+<div class="panel">
+
+
+<button id="closeSettings">
+
+×
+
+</button>
+
+
+<h2>
+Paramètres
+</h2>
+
+
+
+<input
+id="adminPassword"
+type="password"
+placeholder="Mot de passe admin"
+>
+
+
+
+<input
+id="backgroundUrl"
+placeholder="Lien image Imgur / ImgBB"
+>
+
+
+
+<button id="changeBg">
+
+Changer Background
+
+</button>
+
+
+
+<div class="contacts">
+
+
+<a href="#">
+Facebook
+</a>
+
+
+<a href="#">
+Telegram
+</a>
+
+
+<a href="#">
+TikTok
+</a>
+
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<script src="js/app.js"></script>
+
+
+</body>
+
+</html>
