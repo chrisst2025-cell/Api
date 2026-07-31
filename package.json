@@ -1,0 +1,29 @@
+{
+  "name": "chris-lyrics-api",
+  "version": "1.0.0",
+  "description": "Modern Lyrics API with web interface created by Chris St",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "lyrics",
+    "api",
+    "lrclib",
+    "music",
+    "nodejs",
+    "express"
+  ],
+  "author": "Chris St",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-rate-limit": "^7.4.1"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
