@@ -1,0 +1,20 @@
+{
+  "site": {
+    "name": "Chris St Lyrics API",
+    "owner": "Chris St",
+    "background": {
+      "enabled": true,
+      "image": ""
+    },
+    "theme": "dark"
+  },
+  "admin": {
+    "name": "Chris St",
+    "avatar": "https://i.imgur.com/default.png"
+  },
+  "social": {
+    "facebook": "",
+    "telegram": "",
+    "tiktok": ""
+  }
+}
